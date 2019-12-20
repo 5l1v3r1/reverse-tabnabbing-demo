@@ -1,37 +1,11 @@
-## Welcome to GitHub Pages
+# Reverse tabnabbing demo
 
-You can use the [editor on GitHub](https://github.com/EdwinOtten/reverse-tabnabbing-demo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Go to https://htmlpreview.github.io/?https://github.com/EdwinOtten/reverse-tabnabbing-demo/blob/master/vulnerable-page.html to get started.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Explanation
 
-### Markdown
+When visiting the vulnerable page, you see a link to another website which opens in a new tab, as well as a login form. Upon clicking the link to the other website, the original tab gets redirected to a website that looks nearly identical.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Why is this bad?
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/EdwinOtten/reverse-tabnabbing-demo/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+An unsuspecting user could go back to the original tab and enter his highly confidential credentials, not knowing he is now on a (potentially) malicious website and everything he does could be logged.
